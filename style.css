@@ -420,6 +420,7 @@ body {
     .copyright {
         font-size: 2vh;
         margin-top: 1vh;
+        max-height: 10vh;
     }
 }
 
@@ -435,7 +436,8 @@ body {
     padding: 2vmin;
     font-size: 25px;
     margin-top: 1vmin;
-    max-height: 1200vh;
+    max-height: 1600vh;
+    overflow: auto;
 }
 
 /*CSS for menu page*/
