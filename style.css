@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    background: black;
+    display: flex;
+    border-radius: 2vh;
+    justify-content: space-between; /* Adjust for spacing */
+    padding: 0 2vw; /* Add padding for content */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 10vh;
+    border-radius: 1vh;
+}
+
+.nav-items {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li {
+    position: relative;
+    margin: 0 2.5vw;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2vh;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 5vh;
+    font-size: 1.5em;
+    color: #fff;
+    transition: .5s;
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(-3vh);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: #fff;
+    font-weight: 400;
+    opacity: 0;
+    font-size: .75em;
+    letter-spacing: 0.05em;
+    transform: translateY(2vh);
+    transition: .5s;
+}
+
+.navigation ul li:hover a .text {
+    opacity: 1;
+    transform: translateY(1vh);
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    margin-top: 0.2vh;
+    width: 100%;
+    height: 90vh;
+    border-radius: 1vh;
+    object-fit: cover; /* Ensure images cover the container */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+.aboutUs {
+    width: 100%;
+    background-color: black;
+    border-radius: 1vh;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+    padding: 5vh 2vw; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.aboutUs input {
+    height: 5vh;
+    width: 50%;
+    color: white;
+    background-color: black;
+    border: 0.2vh solid white;
+    border-radius: 1vh;
+}
+
+.menu {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    border-radius: 1vh;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    margin: 0.5vh;
+    padding: 2vh 0; /* Add padding for better spacing */
+    height: 65vh;
+}
+
+.menu h1 {
+    padding: 1vh;
+}
+
+.cuisines {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cuisine1, .cuisine2, .cuisine3, .cuisine4 {
+    height: 35vh;
+    width: 20vw;
+    background-color: black;
+    border: 0.2vh solid silver;
+    border-radius: 1vh;
+    margin: 1vh;
+}
+
+.cuisine1 img, .cuisine2 img, .cuisine3 img, .cuisine4 img {
+    height: 23vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu input {
+    height: 5vh;
+    width: 50%;
+    color: white;
+    background-color: black;
+    border: 0.2vh solid white;
+    border-radius: 1vh;
+    margin-top: 3vh;
+}
+
+.testimonial {
+    width: 100%;
+    border-radius: 1vh;
+    background-color: black;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    margin: 0 auto;
+    padding: 2vh 0; /* Add padding for better spacing */
+}
+
+.testimonial h1 {
+    padding: 2vh;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.review1, .review2, .review3, .review4 {
+    height: 35vh;
+    width: 20vw;
+    background-color: black;
+    border: 0.2vh solid silver;
+    border-radius: 1vh;
+    color: white;
+    font-size: 3.5vh;
+    line-height: 5vh;
+    margin: 0.5vh;
+    padding: 0.5vh;
+}
+
+.page-foot {
+    height: 50vh; /* Adjust height based on content */
+    width: 100%;
+    background-color: black;
+    border-top-left-radius: 1vh; /* Top-left corner */
+    border-top-right-radius: 1vh;
+    margin-top: 0.5vh;
+    display: flex;
+    justify-content: space-evenly; /* Distribute space around items */
+    align-items: center; /* Center items vertically */
+    padding: 2vh 4vw; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.quick-links {
+    height: 15vh;
+    width: 43vh;
+    margin-left: 1vw;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color:white;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5vh;
+}
+
+.brand-name a{
+    height: 25vh;
+    width:25vh;
+    margin-left: 17vw;
+    margin-right: 16vw;
+}
+
+.brand-name p {
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+.social-media-sites {
+    height:15vh;
+    width: 32vh;
+    margin-left: 4vw;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vh; /* Add space between icons */
+}
+
+.social-media-sites p {
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.5vh;
+}
+
+.social-media-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 3.5vh;
+    font-family: "Dancing Script", cursive;
+}
+
+.copyright {
+    color:white;
+    height: 5vh;
+    width:100%;
+    background-color: black;
+    text-align: center;
+    border-bottom-left-radius: 1vh; /* Bottom-left corner (no border radius) */
+    border-bottom-right-radius: 1vh;
+}
+/* Media Queries */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        height: 8vh;
+    }
+
+    .navigation ul li a .icon {
+        font-size: 1.2em;
+    }
+
+    .slide img {
+        height: 50vh;
+    }
+
+    .aboutUs {
+        font-size: 2vh;
+        padding: 3vh 2vw; /* Adjust padding for smaller screens */
+    }
+
+    .menu {
+        height: auto;
+    }
+
+    .cuisine1, .cuisine2, .cuisine3, .cuisine4 {
+        width: 45vw;
+    }
+
+    .reviews {
+        flex-direction: column;
+    }
+
+    .review1, .review2, .review3, .review4 {
+        width: 80vw;
+        margin-bottom: 2vh;
+    }
+
+    .quick-links {
+        font-size: 3vh;
+    }
+
+    .quick-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quick-links li {
+        margin-bottom: 1vh;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .navigation {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh 0; /* Adjust padding for smaller screens */
+    }
+
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .navigation ul li {
+        margin: 1vh 0;
+    }
+
+    .aboutUs {
+        padding: 3vh 2vw;
+        font-size: 1.8vh;
+    }
+
+    .cuisines {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuisine1, .cuisine2, .cuisine3, .cuisine4 {
+        width: 80vw;
+    }
+
+    .reviews {
+        flex-direction: column;
+    }
+
+    .review1, .review2, .review3, .review4 {
+        width: 90vw;
+        margin-bottom: 2vh;
+    }
+
+    .menu input, .aboutUs input {
+        width: 80%;
+    }
+
+    .page-foot {
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh 0; /* Adjust padding for smaller screens */
+    }
+
+    .logo-container-footer p {
+        font-size: 2vh;
+    }
+
+    .quick-links {
+        font-size: 2.5vh;
+    }
+
+    .quick-links ul {
+        align-items: center;
+    }
+
+    .social-media-icons {
+        gap: 1vh;
+    }
+
+    .copyright {
+        font-size: 2vh;
+        margin-top: 1vh;
+    }
+}
+
+/* CSS for about us page */
+.aboutUs-detail {
+    height: 120vh;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    text-align: center;
+    padding: 2vmin;
+    font-size: 25px;
+    margin-top: 1vmin;
+    max-height: 1200vh;
+}
+
+/*CSS for menu page*/
+
+.menu-row1, .menu-row2, .menu-row3, .menu-row4 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    text-align: center;
+    padding: 1vmin;
+    font-size: 3.5vmin;
+    margin-top: 1vmin;
+    max-height: 1000vh;
+}
+
+.menu-row1 h1, .menu-row2 h1, .menu-row3 h1, .menu-row4 h1 {
+    margin-top: -0.5vmin;
+}
+
+.american_cuisine, .italian_cuisine, .indian_cuisine, .beverages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-shrink: 1; /* Allow items to shrink */
+}
+
+.american_variety, .italian_variety, .indian_variety, .beverages_variety {
+    height: auto; /* Allow height to adjust based on content */
+    width: 30vw;
+    max-width: 80%; /* Use percentage for responsive width */
+    border: 0.5vmin solid silver;
+    margin: 1vh auto; /* Center items with auto margins */
+}
+
+.american_variety img, .italian_variety img, .indian_variety img, .beverages_variety img {
+    height: 25vh;
+    width: 20vw;
+    margin-top: 1vh;
+}
+
+.american_variety p, .italian_variety p, .indian_variety p, .beverages_variety p {
+    margin: 1vmin;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .american_variety, .italian_variety, .indian_variety, .beverages_variety {
+        width: 45vw; /* Adjust width to fit better */
+    }
+
+    .american_variety img, .italian_variety img, .indian_variety img, .beverages_variety img {
+        height: 20vh; /* Adjust image height for smaller screens */
+        width: 35vw; /* Adjust image width to fit container */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-row1, .menu-row2, .menu-row3, .menu-row4 {
+        height: auto; /* Adjust height to fit content */
+        padding: 2vmin; /* Increase padding for better spacing */
+        font-size: 4vmin; /* Increase font size for better readability */
+    }
+
+    .american_variety, .italian_variety, .indian_variety, .beverages_variety {
+        width: 90%; /* Full width for smaller screens */
+    }
+
+    .american_variety img, .italian_variety img, .indian_variety img, .beverages_variety img {
+        height: auto; /* Adjust height for better fit */
+        width: 100%; /* Full width to fit container */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-row1, .menu-row2, .menu-row3, .menu-row4 {
+        font-size: 6vmin; /* Larger font size for small screens */
+        padding: 4vmin; /* Increase padding for better spacing */
+    }
+
+    .american_variety, .italian_variety, .indian_variety, .beverages_variety {
+        width: 100%; /* Full width for very small screens */
+        margin: 2vh 0; /* Adjust margin for better spacing */
+    }
+
+    .american_variety img, .italian_variety img, .indian_variety img, .beverages_variety img {
+        height: 50vh; /* Adjust height for very small screens */
+        width: 100%; /* Full width to fit container */
+    }
+}
+/*CSS for contactUs page*/
+
+.contact {
+    height: auto; /* Change from 90vh to auto for better flexibility */
+    width: 100%;
+    background-color: black;
+    padding: 2vmin; /* Increased padding for more spacing on smaller screens */
+    margin: 1vmin 0; /* Simplified margin for consistency */
+    border-radius: 2vmin; /* Increased border-radius for better aesthetics */
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center content */
+    font-family: "Dancing Script", cursive;
+}
+
+.our-details, .user-contact {
+    height: auto; /* Change from fixed height to auto for flexibility */
+    width: 90%; /* Use percentage for better adaptation */
+    max-width: 600px; /* Limit maximum width for large screens */
+    border: 0.2vmin solid white;
+    margin-top: 2vmin; /* Reduced margin for smaller screens */
+    text-align: center;
+    color: white;
+    font-size: 4vmin; /* Adjust font size proportionally */
+    padding: 2vmin; /* Added padding for consistency */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-family: "Dancing Script", cursive;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        flex-direction: row; /* Change to row layout on larger screens */
+        justify-content: space-evenly; /* Distribute space evenly */
+    }
+
+    .our-details, .user-contact {
+        width: 35vw; /* Reapply width for larger screens */
+        font-size: 4.5vmin; /* Increase font size for larger screens */
+        padding: 4vmin; /* Increase padding for larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 3vmin; /* Increased padding for very small screens */
+    }
+
+    .our-details, .user-contact {
+        width: 100%; /* Full width for very small screens */
+        font-size: 5vmin; /* Larger font size for readability */
+        padding: 3vmin; /* Increased padding for very small screens */
+    }
+}
+
+/*CSS for privacy policy*/
+
+.privacy_policy {
+    min-height: 110vh; /* Ensures the element is at least 110% of the viewport height */
+    width: 100%; /* Full width */
+    background-color: black;
+    border-radius: 2vmin; /* Increased border-radius for aesthetics */
+    text-align: center;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 4vmin; /* Adjust font size proportionally */
+    margin: 0.5vh; /* Remove margin */
+    padding: 3vmin; /* Adjust padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    overflow: hidden; /* Hide overflow */
+}
+
+@media (min-width: 768px) {
+    .privacy_policy {
+        font-size: 4.5vmin; /* Increase font size for larger screens */
+        padding: 4vmin; /* Increase padding for larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy_policy {
+        font-size: 5vmin; /* Larger font size for readability on small screens */
+        padding: 4vmin; /* Increase padding for very small screens */
+    }
+}
+
+/*CSS for terms and conditions*/
+
+.terms_and_conditions {
+    min-height: 75vh; /* Ensures section is at least 75% of viewport height */
+    width: 100%; /* Responsive width */
+    background-color: black;
+    border-radius: 2vmin; /* Consistent border-radius */
+    text-align: center;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 4vmin; /* Proportional font size */
+    margin: 0.5vh auto; /* Center content horizontally */
+    padding: 3vmin; /* Padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: hidden; /* Hide overflow from child elements */
+    max-height: 150vh;
+}
+
+@media (min-width: 768px) {
+    .terms_and_conditions {
+        font-size: 4.5vmin; /* Larger font size for medium to large screens */
+        padding: 4vmin; /* Increased padding for medium to large screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .terms_and_conditions {
+        font-size: 5vmin; /* Larger font size for small screens */
+        padding: 4vmin; /* Increased padding for small screens */
+        width: 100%; /* Full width on very small screens */
+    }
+}
+
